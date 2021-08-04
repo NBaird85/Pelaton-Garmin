@@ -1,0 +1,12 @@
+version: "3.5"
+
+services:
+  p2g:
+    container_name: p2g
+    image: philosowaffle/peloton-to-garmin
+    environment:
+      - TZ=America/Chicago
+    volumes:
+      - ./configuration.local.json:/app/configuration.local.json
+      - ./output:/app/output
+      - ./working:/app/working
